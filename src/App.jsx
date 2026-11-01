@@ -34,7 +34,7 @@ export default function App() {
   return (
     <main>
       <h1>Mes tâches</h1>
-      <p>Une application React et MySQL sur cPanel.</p>
+      <p>Mise à jour déployée avec Git et cPanel.</p>
 
       <form onSubmit={add}>
         <input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Nouvelle tâche" required maxLength={255} />
