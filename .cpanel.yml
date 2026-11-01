@@ -1,6 +1,6 @@
 ---
 deployment:
   tasks:
-    - export PATH=/opt/alt/alt-nodejs22/root/usr/bin:$PATH; npm ci --no-audit --no-fund && npm run build
+    - export PATH=/opt/alt/alt-nodejs22/root/usr/bin:$PATH TOKIO_WORKER_THREADS=2 RAYON_NUM_THREADS=2 UV_THREADPOOL_SIZE=2 NODE_OPTIONS=--v8-pool-size=2; npm ci --no-audit --no-fund && npm run build
     - rm -rf $HOME/public_html/react.odoip.cloud/assets
     - cp -R dist/. $HOME/public_html/react.odoip.cloud/
